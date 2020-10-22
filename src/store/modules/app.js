@@ -18,13 +18,13 @@ const mutations = {
     state.sidebar.opened = !state.sidebar.opened
     state.sidebar.withoutAnimation = false
     if (state.sidebar.opened) {
-      Cookies.set('sidebarStatus', 1)
+      Cookies.set('sidebarStatus', 1, { SameSite: 'Lax' })
     } else {
-      Cookies.set('sidebarStatus', 0)
+      Cookies.set('sidebarStatus', 0, { SameSite: 'Lax' })
     }
   },
   CLOSE_SIDEBAR: (state, withoutAnimation) => {
-    Cookies.set('sidebarStatus', 0)
+    Cookies.set('sidebarStatus', 0, { SameSite: 'Lax' })
     state.sidebar.opened = false
     state.sidebar.withoutAnimation = withoutAnimation
   },
@@ -38,7 +38,7 @@ const mutations = {
   },
   SET_SIZE: (state, size) => {
     state.size = size
-    Cookies.set('size', size)
+    Cookies.set('size', size, { SameSite: 'Lax' })
   }
 }
 
