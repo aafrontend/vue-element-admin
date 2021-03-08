@@ -196,7 +196,7 @@ export const asyncRoutes = [
     redirect: '/example/list',
     name: 'Example',
     meta: {
-      title: 'example',
+      title: 'Example',
       icon: 'el-icon-s-help'
     },
     children: [
